@@ -1,0 +1,49 @@
+axes.titlesize : 18
+axes.titlepad : 10.0
+axes.titlecolor : 595959
+axes.labelsize : 12
+axes.labelcolor : 595959
+axes.labelpad : 4.0
+axes.prop_cycle : cycler('color', ['EE6666', '3388BB', '9988DD', 'EECC55', '88BB44', 'FFBBBB'])
+axes.facecolor : white
+axes.grid : True
+axes.linewidth : 1.0
+axes.edgecolor : 898888
+
+grid.color : grey
+grid.linestyle : :
+grid.linewidth : 0.5
+
+#lines.prop_cycle : cycler('color','bgrcmyk')
+lines.linewidth : 3.0
+lines.markersize : 5
+
+xtick.labelsize : 10
+xtick.major.size: 0
+xtick.minor.size: 0
+xtick.color : 595959
+xtick.labelcolor : inherit
+xtick.major.pad : 5.0
+xtick.minor.pad : 5.0
+ytick.labelsize : 10
+ytick.major.size: 0
+ytick.minor.size: 0
+ytick.color : 595959
+ytick.labelcolor : inherit
+ytick.major.pad : 5.0
+ytick.minor.pad : 5.0
+
+legend.fancybox      : True
+legend.loc           : upper right
+legend.numpoints     : 2      # the number of points in the legend line
+legend.fontsize      : small
+legend.framealpha    : 0.5    # opacity of legend frame
+legend.scatterpoints : 3 # number of scatter points
+legend.edgecolor     : inherit   # legend edge color ('inherit' means it uses axes.edgecolor)
+
+font.family : sans-serif
+
+figure.figsize : 7, 5
+figure.frameon : True
+
+#https://matplotlib.org/stable/users/dflt_style_changes.html
