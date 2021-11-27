@@ -4,10 +4,10 @@ import numpy as np
 import pandas as pd
 
 ######DATA
-df1 = pd.read_excel(r'C:\Users\joaop\OneDrive\Ambiente de Trabalho\The Office\Tese\Prática\MotorHTS.xlsx',sheet_name="flux tests 2 poles")
-df2 = pd.read_excel(r'C:\Users\joaop\OneDrive\Ambiente de Trabalho\The Office\Tese\Prática\MotorHTS.xlsx',sheet_name="flux tests 4 poles")
-df3 = pd.read_excel(r'C:\Users\joaop\OneDrive\Ambiente de Trabalho\The Office\Tese\Prática\MotorHTS.xlsx',sheet_name="flux tests 8 poles")
-df = pd.read_excel(r'C:\Users\joaop\OneDrive\Ambiente de Trabalho\The Office\Tese\Prática\MotorHTS.xlsx',sheet_name="flux config tests")
+df1 = pd.read_excel(r'MotorHTS.xlsx',sheet_name="flux tests 2 poles")
+df2 = pd.read_excel(r'MotorHTS.xlsx',sheet_name="flux tests 4 poles")
+df3 = pd.read_excel(r'MotorHTS.xlsx',sheet_name="flux tests 8 poles")
+df = pd.read_excel(r'MotorHTS.xlsx',sheet_name="flux config tests")
 
 teeth = df1['Tooth'].to_list()
 flux1 = df1['Flux Phase 1'].to_list()
@@ -30,7 +30,7 @@ def make_point(ax,paint, x, y):
 
 def plot_2d_flux(file,mode):
     if mode == 0:
-        df1 = pd.read_excel(r'C:\Users\joaop\OneDrive\Ambiente de Trabalho\The Office\Tese\Prática\MotorHTS.xlsx',sheet_name=file)
+        df1 = pd.read_excel(r'MotorHTS.xlsx',sheet_name=file)
         teeth = df1['Tooth'].to_list()
         flux1 = df1['Flux Phase 1'].to_list()
         flux2 = df1['Flux Phase 2'].to_list()
@@ -38,9 +38,9 @@ def plot_2d_flux(file,mode):
         colors = ['#2C2C2C','#C52626','#66A2EE']
         labels = ["Phase 1","Phase 2","Phase 3"]
     elif mode == 4:
-        df1 = pd.read_excel(r'C:\Users\joaop\OneDrive\Ambiente de Trabalho\The Office\Tese\Prática\MotorHTS.xlsx',sheet_name="flux tests 2 poles")
-        df2 = pd.read_excel(r'C:\Users\joaop\OneDrive\Ambiente de Trabalho\The Office\Tese\Prática\MotorHTS.xlsx',sheet_name="flux tests 4 poles")
-        df3 = pd.read_excel(r'C:\Users\joaop\OneDrive\Ambiente de Trabalho\The Office\Tese\Prática\MotorHTS.xlsx',sheet_name="flux tests 8 poles")
+        df1 = pd.read_excel(r'MotorHTS.xlsx',sheet_name="flux tests 2 poles")
+        df2 = pd.read_excel(r'MotorHTS.xlsx',sheet_name="flux tests 4 poles")
+        df3 = pd.read_excel(r'MotorHTS.xlsx',sheet_name="flux tests 8 poles")
         teeth = df1['Tooth'].to_list()
         flux1 = df1['Flux Phase 1'].to_list()
         flux1_1 = df1['Flux Phase 2'].to_list()
@@ -54,9 +54,9 @@ def plot_2d_flux(file,mode):
         colors = ['#EE6666','#66A2EE','#64A246']
         labels = ['2 Poles','4 Poles','8 Poles']
     else:
-        df1 = pd.read_excel(r'C:\Users\joaop\OneDrive\Ambiente de Trabalho\The Office\Tese\Prática\MotorHTS.xlsx',sheet_name="flux tests 2 poles")
-        df2 = pd.read_excel(r'C:\Users\joaop\OneDrive\Ambiente de Trabalho\The Office\Tese\Prática\MotorHTS.xlsx',sheet_name="flux tests 4 poles")
-        df3 = pd.read_excel(r'C:\Users\joaop\OneDrive\Ambiente de Trabalho\The Office\Tese\Prática\MotorHTS.xlsx',sheet_name="flux tests 8 poles")
+        df1 = pd.read_excel(r'MotorHTS.xlsx',sheet_name="flux tests 2 poles")
+        df2 = pd.read_excel(r'MotorHTS.xlsx',sheet_name="flux tests 4 poles")
+        df3 = pd.read_excel(r'MotorHTS.xlsx',sheet_name="flux tests 8 poles")
         teeth = df1['Tooth'].to_list()
         flux1 = df1['Flux Phase '+str(mode)].to_list()
         flux2 = df2['Flux Phase '+str(mode)].to_list()
@@ -123,7 +123,7 @@ def plot_2d_flux(file,mode):
 ######3D
 def plot_3d_flux(file):
     fig = plt.figure(figsize= [5,5])
-    df1 = pd.read_excel(r'C:\Users\joaop\OneDrive\Ambiente de Trabalho\The Office\Tese\Prática\MotorHTS.xlsx',sheet_name=file)
+    df1 = pd.read_excel(r'MotorHTS.xlsx',sheet_name=file)
     teeth = df1['Tooth'].to_list()
     flux1 = df1['Flux Phase 1'].to_list()
     flux2 = df1['Flux Phase 2'].to_list()
