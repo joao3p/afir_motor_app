@@ -3,26 +3,6 @@ import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 
-######DATA
-df1 = pd.read_excel(r'MotorHTS.xlsx',sheet_name="flux tests 2 poles")
-df2 = pd.read_excel(r'MotorHTS.xlsx',sheet_name="flux tests 4 poles")
-df3 = pd.read_excel(r'MotorHTS.xlsx',sheet_name="flux tests 8 poles")
-df = pd.read_excel(r'MotorHTS.xlsx',sheet_name="flux config tests")
-
-teeth = df1['Tooth'].to_list()
-flux1 = df1['Flux Phase 1'].to_list()
-flux2 = df1['Flux Phase 2'].to_list()
-flux3 = df1['Flux Phase 3'].to_list()
-flux4_1 = df1['Flux Phase 1'].to_list()
-flux4_2 = df1['Flux Phase 2'].to_list()
-flux4_3 = df1['Flux Phase 3'].to_list()
-flux8_1 = df1['Flux Phase 1'].to_list()
-flux8_2 = df1['Flux Phase 2'].to_list()
-flux8_3 = df1['Flux Phase 3'].to_list()
-
-voltage = df['Voltage'].to_list()
-current = df['Current'].to_list()
-
 ######FUNCTIONS
 def make_point(ax,paint, x, y):
     ax.plot(x, y, 'o', color=paint, ms = 7.5, mec = 'white', zorder = 7)
